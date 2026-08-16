@@ -899,7 +899,7 @@ a.header-mark:hover { color: var(--text-on-paper); }
   line-height: 1.6;
 }
 .home-list li::before {
-  content: "?";
+  content: "→";
   position: absolute; left: 0; top: 0;
   font-family: var(--font-mono); font-size: 14px;
   color: var(--signal);
