@@ -424,6 +424,7 @@ a.header-mark:hover { color: var(--text-on-paper); }
 
 /* ============ SOURCES ============ */
 .sources-block { margin-top: 44px; padding-top: 32px; border-top: 1px solid var(--paper-line); }
+.section-ink .sources-block { border-top-color: var(--ink-line); }
 .sources-block h3 { font-size: 17px; margin-bottom: 18px; }
 
 /* Youth-row highlight in the all-age table */
@@ -943,12 +944,12 @@ a.header-mark:hover { color: var(--text-on-paper); }
 
 .header-mark { white-space: nowrap; }
 
-/* "In His Majesty's Service" is markedly longer than any previous site name
-   this masthead has carried — at ≤400px it runs to within 0px of the "Get
-   updates" button with no size adjustment. Scale it down at narrow widths
-   rather than let it touch. */
+/* "In His Majesty's Service" runs to within 0px of the "Get updates" button
+   at ≤340px if left on one line. A previous fix shrank the font, which read
+   as a title that looked accidentally small. Wrapping to two lines at full
+   size reads as intentional instead. */
 @media (max-width: 400px) {
-  a.header-mark { font-size: 9.5px; letter-spacing: 0.02em; }
+  a.header-mark { white-space: normal; max-width: 150px; line-height: 1.35; }
 }
 
 @media (max-width: 720px) {
