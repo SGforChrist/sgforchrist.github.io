@@ -831,7 +831,7 @@ a.header-mark:hover { color: var(--text-on-paper); }
 
 /* ============================================================================
    ROOT SITE — index.html and about.html, built August 2026 when the project
-   widened from the GHS26 single-issue site into "In His Majesty's Service", a standing home
+   widened from the GHS26 single-issue site into "SG for Christ", a standing home
    for writing on faith, church and culture in Singapore. That original site
    stays at sgforchrist.github.io/GHS26/ and is linked from here, not merged in.
    Every component below declares colours for BOTH .section-paper and
@@ -944,10 +944,12 @@ a.header-mark:hover { color: var(--text-on-paper); }
 
 .header-mark { white-space: nowrap; }
 
-/* "In His Majesty's Service" runs to within 0px of the "Get updates" button
-   at ≤340px if left on one line. A previous fix shrank the font, which read
-   as a title that looked accidentally small. Wrapping to two lines at full
-   size reads as intentional instead. */
+/* Written for a since-renamed, longer site name ("In His Majesty's Service",
+   24 characters) that ran to within 0px of the "Get updates" button at
+   ≤340px on one line. The current name ("SG for Christ", 13 characters)
+   never triggers this — natural width is ~100px, well under the 150px
+   constraint below. Left in place as a dormant safety net: if a future name
+   is long again, this is already here rather than needing to be rebuilt. */
 @media (max-width: 400px) {
   a.header-mark { white-space: normal; max-width: 150px; line-height: 1.35; }
 }
